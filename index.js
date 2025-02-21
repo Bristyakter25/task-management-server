@@ -10,7 +10,7 @@ app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.lwvml.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -30,7 +30,7 @@ async function run() {
     const userCollection = client.db('taskManagement').collection('users');
     const taskCollection = client.db('taskManagement').collection('tasks');
 
-    // User related APIs
+    
     app.post('/users', async (req, res) => {
       try {
         const newUser = req.body;
@@ -106,11 +106,11 @@ app.put('/tasks/reorder', async (req, res) => {
   try {
     const updatedTasks = req.body;
 
-    // Iterate over each task and update its position in the database
+    
     for (const task of updatedTasks) {
       const filter = { _id: new ObjectId(task._id) };
       
-      // Remove the _id field before updating
+     
       const { _id, ...taskWithoutId } = task;
       const updateDoc = { $set: taskWithoutId };
       
