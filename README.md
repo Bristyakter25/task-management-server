@@ -5,7 +5,7 @@
 This is the backend service for the **Task Management** application, built using **Node.js** and **Express.js**. It provides RESTful APIs for managing tasks and database interactions. **MongoDB** is used for data storage.  
 
 ## 🔗 Live Links  
-- 🌐 API Base URL: https://task-management-26416.web.app/ 
+- 🌐 Live URL: https://task-management-26416.web.app/ 
 
 ## 📦 Dependencies  
 The backend relies on the following libraries and frameworks:  
