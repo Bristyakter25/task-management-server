@@ -24,8 +24,8 @@ Ensure you have **Node.js** and **MongoDB** installed on your system.
 ### Setup Instructions  
 1. Clone the repository:  
    ```bash
-   git clone <repository-url>
-   cd backend
+   git clone https://github.com/Bristyakter25/task-management-server
+   cd task-management-server
    ```
 2. Install dependencies:  
    ```bash
